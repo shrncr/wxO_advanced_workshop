@@ -16,7 +16,7 @@ This project organizes its files as follows:
 ├── README.md (this file)
 ├── pyproject.toml (contains all dependencies for all labs)
 ├── .env (Environment file for Orchestrate server)
-├── lab-guide-folder (example lab structure)
+├── lab-folder (example lab structure)
 │   ├── lab-guide.md
 │   ├── starter-file.py
 │   └── Final_code
@@ -24,8 +24,8 @@ This project organizes its files as follows:
 
 ```
 
-- **lab-guide-folder** → where you’ll build the lab exercises.  
-- **Final_code folder** → completed code, provided only if you need to catch up.  
+- **lab-folder** → where you’ll build the lab exercises.  
+- **Final_code folder** → completed code, use only if you need to catch up.  
 - **lab-guide.md** → step-by-step instructions for the lab.  
 
 
@@ -34,15 +34,13 @@ This project organizes its files as follows:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/<your-org>/orchestrate-workshop.git
-cd orchestrate-workshop
+git clone https://github.com/shrncr/wxO_advanced_workshop.git
+cd wxO_advanced_workshop
 ```
 ### 2. Create and activate a virtual environment
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate    # Linux/Mac
-# or
-.\.venv\Scripts\activate     # Windows
+source .venv/bin/activate    # Linux/Mac/WSL
 ```
 ### 3. Install dependencies
 
