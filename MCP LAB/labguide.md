@@ -76,77 +76,42 @@ Tip: Paste your token in your notes. We will use this token in future steps
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/91f54bc5-a163-4420-b3b6-b3a2ec000cbd/user_cropped_screenshot.png?tl_px=242,0&br_px=1225,185&force_format=jpeg&q=100&width=983&wat_scale=87&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=385,126)
 
 
+
 #### Create secure connection in Orchestrate
 
 
-Tip: **We will now store our Personal Access Token (PAT) securely so the toolkit can access GitHub**
 
-**Below is the step-by-step walkthrough you may copy & paste:**
-
-[[# create the shell connection]]
-
-[[orchestrate connections add -a github-demo]]
-
-[[# configure as key/value, team-shared, bound to GitHub]]
-
-[[orchestrate connections configure \\]]
-
-[[-a github-demo \\]]
-
-[[--env draft \\]]
-
-[[--kind key_value \\]]
-
-[[--type team \\]]
-
-[[--url \[https://github.com]]
-
-[[# set your PAT (paste your actual token)]]
-
-[[orchestrate connections set-credentials \\]]
-
-[[-a github-demo \\]]
-
-[[--env draft \\]]
-
-[[-e GITHUB_PERSONAL_ACCESS_TOKEN=&lt;YOUR_PAT&gt;]]
-
-[[# quick check]]
-
-[[orchestrate connections list]]
-
-
-13\. Create the shell connection: [[orchestrate connections add -a github-demo]]
+13\. Create the shell connection: orchestrate connections add -a github-demo
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/5d214cbf-bbe4-4705-b6ab-872f58cd7e35/user_cropped_screenshot.png?tl_px=192,0&br_px=1222,171&force_format=jpeg&q=100&width=1030)
 
 
 14\. Configure as key/value, team-shared, bound to GitHub:\
 \
-[[orchestrate connections configure \\]]
+orchestrate connections configure 
 
-[[-a github-demo \\]]
+-a github-demo 
 
-[[--env draft \\]]
+--env draft
 
-[[--kind key_value \\]]
+--kind key_value
 
-[[--type team \\]]
+--type team
 
-[[--url \[https://github.com]]
+--url \[https://github.com
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/7e72d114-90e4-49b6-b995-43772e71dc59/user_cropped_screenshot.png?tl_px=3,0&br_px=968,224&force_format=jpeg&q=100&width=965)
 
 
 15\. Set your PAT (Paste your actual Personal Access Token): \
 \
-[[orchestrate connections set-credentials \\]]
+orchestrate connections set-credentials 
 
-[[-a github-demo \\]]
+-a github-demo 
 
-[[--env draft \\]]
+--env draft 
 
-[[-e GITHUB_PERSONAL_ACCESS_TOKEN=&lt;YOUR_PAT&gt;]]
+-e GITHUB_PERSONAL_ACCESS_TOKEN=<YOUR_PAT>
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/8fc7d3f5-77b8-44ec-b5cf-51d6ea3ec748/user_cropped_screenshot.png?tl_px=0,0&br_px=1007,211&force_format=jpeg&q=100&width=1007)
 
@@ -159,30 +124,30 @@ Tip: **We will now store our Personal Access Token (PAT) securely so the toolkit
 #### Import the GitHub MCP Toolkit
 
 
-Tip: We will now install the official GitHub MCP Server and make its tools available to agents
+We will now install the official GitHub MCP Server and make its tools available to agents
 
 
 17\. Paste: \
-[[orchestrate toolkits import \\]]
+orchestrate toolkits import 
 
-[[  --kind mcp \\]]
+--kind mcp 
 
-[[  --name github-mcp \\]]
+--name github-mcp
 
-[[  --description "GitHub via MCP" \\]]
+--description "GitHub via MCP"
 
-[[  --package @modelcontextprotocol/server-github \\]]
+--package @modelcontextprotocol/server-github
 
-[[  --language node \\]]
+--language node
 
-[[  --tools "\*" \\]]
+--tools "\*" 
 
-[[  --app-id github-demo]]
+--app-id github-demo
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/fa1843b0-ec5e-46a1-8131-a6aa15ab9ccc/user_cropped_screenshot.png?tl_px=0,0&br_px=823,259&force_format=jpeg&q=100&width=823)
 
 
-18\. Verify: [[orchestrate toolkits list]]
+18\. Verify: orchestrate toolkits list
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/e51f8359-4e49-47ad-b7cd-bbc5b469a69c/user_cropped_screenshot.png?tl_px=0,0&br_px=1093,412&force_format=jpeg&q=100&wat_scale=97&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=843,-301)
 
@@ -190,48 +155,48 @@ Tip: We will now install the official GitHub MCP Server and make its tools avail
 #### Create & Import GitHub React-style agent
 
 
-Tip: This agent will allow us to talk to GitHub in natural language and have the agent decide which MCP tools to call.
+This agent will allow us to talk to GitHub in natural language and have the agent decide which MCP tools to call.
 
 
 19\. Create a .yaml file in the directory you are currently in and paste+save:\
 \
-[[spec_version: v1]]
+spec_version: v1
 
-[[kind: native]]
+kind: native
 
-[[name: github_helper_react]]
+name: github_helper_react
 
-[[style: react]]
+style: react
 
-[[llm: watsonx/meta/llama-3-8b-instruct]]
+llm: watsonx/meta/llama-3-8b-instruct
 
-[[description: &gt;]]
+description: 
 
-[[  GitHub helper that uses the GitHub MCP toolkit to find repositories,]]
+GitHub helper that uses the GitHub MCP toolkit to find repositories,
 
-[[  summarize issues, and answer questions conversationally.]]
+summarize issues, and answer questions conversationally.
 
-[[instructions: &gt;]]
+instructions: 
 
-[[  - When asked about repositories, use the GitHub MCP tools to search/list them.]]
+- When asked about repositories, use the GitHub MCP tools to search/list them.
 
-[[  - When asked about issues for a time window (e.g., "this week"), fetch and summarize them clearly.]]
+- When asked about issues for a time window (e.g., "this week"), fetch and summarize them clearly.
 
-[[  - Prefer compact tabular results, then a short summary.]]
+- Prefer compact tabular results, then a short summary.
 
-[[  - Ask for confirmation before any write action.]]
+- Ask for confirmation before any write action.
 
-[[tools: \[\\]]\]
+tools: []
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/bc41e90d-b384-408f-8a5d-1eeb60f5aca2/user_cropped_screenshot.png?tl_px=36,0&br_px=1183,468&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,768)
 
 
-20\. Import the agent: [[orchestrate agents import -f agents/github_helper.yaml]]
+20\. Import the agent: orchestrate agents import -f agents/github_helper.yaml
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/02ac635e-0622-41e9-a456-db960eadbb8a/user_cropped_screenshot.png?tl_px=0,16&br_px=1290,838&force_format=jpeg&q=100&width=1120.0)
 
 
-21\. Verify: [[orchestrate agents list]]
+21\. Verify: orchestrate agents list
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/de2f53b8-9e5a-4f20-bd0b-778bcc09ebf9/user_cropped_screenshot.png?tl_px=0,124&br_px=1239,894&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=374,637)
 
