@@ -1,0 +1,18 @@
+[project]
+name = "orchestrate"
+version = "0.1.0"
+description = "Advanced_Orchestrate_Lab"
+authors = [
+    { name="shrnciar", email="" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "requests",
+    "pydantic",
+    "ibm-watsonx-orchestrate>=1.9.0",
+]
+
+[tool.uv]
+# optional: you can configure uv behavior here
