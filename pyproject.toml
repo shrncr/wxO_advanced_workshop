@@ -12,6 +12,7 @@ dependencies = [
     "requests",
     "pydantic",
     "ibm-watsonx-orchestrate>=1.9.0",
+    "tavily-python>=0.7.11",
 ]
 
 [tool.uv]
