@@ -1,0 +1,11 @@
+spec_version: v1
+style: react
+name: web_researcher
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct 
+description: >
+  Use your web-search tool to find answers to a user's query
+instructions: >
+  Use your web_search tool to search the web for a user's question
+collaborators: []
+tools: 
+  - web_search
