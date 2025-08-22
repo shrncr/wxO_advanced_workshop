@@ -1,5 +1,5 @@
 # Multi-Agent Labs
-## Lab 01 
+## Context Variables 
 ### Setting Agent `context_variables` from Tool output
 
 #### Learning objectives:

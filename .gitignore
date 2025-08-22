@@ -1,0 +1,29 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Ignore IDE and editor specific files
+.vscode/
+.DS_Store
+*.swp
+*.bak
+*.tmp
+
+# Ignore environment files
+.env
+wxai/
+wxo/
+
+# Ignore sensitive script files
+activate-my-essentials.sh
+
+# Ignore temporary or generated files
+agents.json
+tools.json
