@@ -22,7 +22,7 @@ def my_tool(input: str) -> str:
     merged_data = input.upper()
     
     # Comment out the following line for Step 3 of the lab.
-    #return f"merged_data={merged_data}" 
+    return f"merged_data={merged_data}" 
     
     # Uncomment the following line for Step 3 of the lab.
-    return merged_data
+    #return merged_data
