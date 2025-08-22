@@ -1,0 +1,22 @@
+kind: native
+name: context_variables
+display_name: context variables
+description: Agent description
+context_access_enabled: true
+context_variables:
+- wxo_user_name
+- wxo_email_id
+- wxo_tenant_id
+- merged_data
+
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: react
+instructions: 'When the user says "hello" you call the make_uppercase tool 
+  and provide it with the context variables {wxo_user_name}. 
+  Finally provide the user with a table of the following context variables: 
+  Username: {wxo_user_name} and Email ID: {wxo_email_id} and 
+  Tenant ID: {wxo_tenant_id} and Merged Data: {merged_data}'
+collaborators: []
+tools: 
+- make_uppercase
+spec_version: v1
