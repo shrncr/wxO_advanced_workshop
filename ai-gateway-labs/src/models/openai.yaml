@@ -1,0 +1,11 @@
+spec_version: v1
+kind: model
+name: openai/gpt-4.1-mini
+display_name: GPT 4.1 mini # Optional
+description: OpenAI GPT 4.1 mini # Optional
+tags: #Optional
+  - OpenAI
+  - '4.1 mini'
+model_type: chat # Optional. Default is "chat". Options: ["chat"|"chat_vision"|"completion"|"embedding"]
+provider_config:
+  request_timeout: 20000

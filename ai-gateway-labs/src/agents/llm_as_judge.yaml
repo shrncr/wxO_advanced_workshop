@@ -1,0 +1,22 @@
+kind: native
+name: Claude_as_Judge
+display_name: Claude as Judge
+description: 'This agent uses two collaborator agents to do a task then judges the
+  best result and presents it to the user. '
+context_access_enabled: true
+context_variables: []
+llm: virtual-model/anthropic/claude-opus-4-20250514
+style: default
+instructions: |-
+  First, send the original user request to the Gemini agent and remember the results.
+
+  Second, send the original user request to the OpenAI agent and remember the results.
+
+  Make a table of both agents responses that has two columns, Agent and Response from agent. Then populate that table with the results from both agents and their responses and present to the user.
+
+  Last, give your opinion of which story is better. Be concise in your option.
+guidelines: []
+collaborators:
+- OpenAI_agent
+- Gemini_2_agent
+spec_version: v1

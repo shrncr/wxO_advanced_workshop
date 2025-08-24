@@ -1,0 +1,10 @@
+kind: native
+name: Gemini_2_agent
+display_name: Gemini agent
+description: This agent uses the Gemini 2 Flash model and can answer user questions.
+context_access_enabled: true
+context_variables: []
+llm: virtual-model/google/gemini-2.5-flash
+style: default
+instructions: ''
+spec_version: v1
