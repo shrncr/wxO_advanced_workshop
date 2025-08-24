@@ -18,11 +18,11 @@ In this lab you will learn a number of concepts including:
 
 Follow these steps for the lab.
 
-Step 1: [README for connections.md](src/connections/README for connections.md "Go to Step 1")
+Step 1: [README_for_connections.md](src/connections/README_for_connections.md "Go to Step 1 now")
 
-Step 2: [README for models.md](src/models/README for models.md "Go to Step 2")
+Step 2: [README_for_models.md](src/models/README_for_models.md "Go to Step 2 now")
 
-Step 3: [README for agents.md](src/agents/README for agents.md "Go to Step 3")
+Step 3: [README_for_agents.md](src/agents/README_for_agents.md "Go to Step 3")
 
 Step 4: Having some fun time! Try these prompts with your Claude as Judge agent
 
