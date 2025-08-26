@@ -143,17 +143,17 @@ We will now install the official GitHub MCP Server and make its tools available 
 ```bash
 orchestrate toolkits import 
 
---kind mcp 
+--kind mcp \
 
---name github-mcp
+--name github-mcp \
 
---description "GitHub via MCP"
+--description "GitHub via MCP" \
 
---package @modelcontextprotocol/server-github
+--package @modelcontextprotocol/server-github \
 
---language node
+--language node \
 
---tools "\*" 
+--tools "*" \
 
 --app-id github-demo
 ```
