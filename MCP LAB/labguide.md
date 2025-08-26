@@ -96,7 +96,7 @@ orchestrate connections add -a github-demo
 14\. Configure as key/value, team-shared, bound to GitHub:
 
 ```bash
-orchestrate connections configure 
+orchestrate connections configure \
 
 -a github-demo \
 
@@ -114,7 +114,7 @@ orchestrate connections configure
 15\. Set your PAT (Paste your actual Personal Access Token): 
 
 ```bash
-orchestrate connections set-credentials 
+orchestrate connections set-credentials \
 
 -a github-demo \
 
@@ -141,7 +141,7 @@ We will now install the official GitHub MCP Server and make its tools available 
 
 17\. Paste: 
 ```bash
-orchestrate toolkits import 
+orchestrate toolkits import \
 
 --kind mcp \
 
