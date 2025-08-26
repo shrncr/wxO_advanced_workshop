@@ -98,13 +98,13 @@ orchestrate connections add -a github-demo
 ```bash
 orchestrate connections configure 
 
--a github-demo 
+-a github-demo \
 
---env draft
+--env draft \
 
---kind key_value
+--kind key_value \
 
---type team
+--type team \
 
 --url https://github.com
 ```
@@ -116,9 +116,9 @@ orchestrate connections configure
 ```bash
 orchestrate connections set-credentials 
 
--a github-demo 
+-a github-demo \
 
---env draft 
+--env draft \
 
 -e GITHUB_PERSONAL_ACCESS_TOKEN=<YOUR_PAT>
 ```
@@ -175,7 +175,7 @@ This agent will allow us to talk to GitHub in natural language and have the agen
 
 
 19\. Create a .yaml file in the directory you are currently in and paste+save:
-```bash
+```yaml
 spec_version: v1
 
 kind: native
