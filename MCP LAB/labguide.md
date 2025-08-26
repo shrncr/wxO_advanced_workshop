@@ -106,7 +106,7 @@ orchestrate connections configure
 
 --type team
 
---url \[https://github.com
+--url https://github.com
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/7e72d114-90e4-49b6-b995-43772e71dc59/user_cropped_screenshot.png?tl_px=3,0&br_px=968,224&force_format=jpeg&q=100&width=965)
 
