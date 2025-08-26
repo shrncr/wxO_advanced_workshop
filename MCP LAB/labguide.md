@@ -257,18 +257,37 @@ orchestrate chat start
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/6bb7ebe2-2279-4e18-82fa-706855a03839/ascreenshot.jpeg?tl_px=44,0&br_px=1420,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,276)
 
+27\. Click "Import"
 
-27\. Click "Add from local instance"
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/3fb08b05-29e9-4831-9971-2e242e6563f9/ascreenshot.jpeg?tl_px=94,80&br_px=1470,849&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=563,277)
-
-
-28\. Add tools & add to agent
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/1268768a-e6bf-4039-9413-20859d0b96d6/user_cropped_screenshot.png?tl_px=0,73&br_px=1376,842&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=114,277)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/df3b5699-6b46-4e08-84e1-14deea30c427/user_cropped_screenshot.png?tl_px=0,0&br_px=2938,1654&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=358,341)
 
 
-29\. Once tools have been added feel free to ask your agent "List my repositories", "Show open issues this week", or "What can you do for me?"
+28\. Click "Import from MCP server"
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/3e41b49e-943d-43d0-bb21-24a54d70523a/user_cropped_screenshot.png?tl_px=0,0&br_px=2938,1662&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=684,275)
+
+
+29\. Click "Manage MCP servers"
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/38fc8094-9468-499a-b5f7-c6406c3b9bd3/user_cropped_screenshot.png?tl_px=0,0&br_px=2936,1630&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=836,103)
+
+
+30\. Click "Edit details"
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/11303fb9-f68e-4290-8479-cb9f7fe3978e/user_cropped_screenshot.png?tl_px=0,0&br_px=2926,1344&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=949,173)
+
+
+31\. Click "Connect" & "Done"
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/fc1d0b5c-6ee8-4dfa-bc7b-b838ea574807/user_cropped_screenshot.png?tl_px=0,0&br_px=2936,1678&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=156,499)
+
+
+32\. Import tools from MCP server
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/56b20928-5316-4b5b-9c85-b052a08bed9a/screenshot.webp?tl_px=0,0&br_px=2930,1544&force_format=jpeg&q=100&width=1120.0)
+
+
+33\. Once tools have been added feel free to ask your agent "List my repositories", "Show open issues this week", or "What can you do for me?"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/a7511b40-c14b-4409-931a-24acf30a2ba0/ascreenshot.jpeg?tl_px=94,186&br_px=1470,956&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=748,511)
 
