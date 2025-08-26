@@ -1,0 +1,11 @@
+spec_version: v1
+kind: model
+name: anthropic/claude-opus-4-20250514
+display_name: Claude Opus 4 # Optional
+description: Our previous flagship model. Very high intelligence and capability. # Optional
+tags: #Optional
+  - Anthropic
+  - 'Opus 4'
+model_type: chat # Optional. Default is "chat". Options: ["chat"|"chat_vision"|"completion"|"embedding"]
+provider_config:
+  request_timeout: 20000
