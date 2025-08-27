@@ -18,7 +18,7 @@ orchestrate connections add -a claude_creds
 # Configure the connection for the draft environment
 orchestrate connections configure -a claude_creds --env draft -k key_value -t team
 # Set the credentials for the draft environment
-orchestrate connections set-credentials -a claude_creds --env draft -e "api_key=$CLAUDE_API_KEY" --env live -e "api_key=$CLAUDE_API_KEY"
+orchestrate connections set-credentials -a claude_creds --env draft -e "api_key=$CLAUDE_API_KEY"
 
 ## Live environement setup (uncomment for SaaS deployment) ### ADK only supports draft env configurations
 

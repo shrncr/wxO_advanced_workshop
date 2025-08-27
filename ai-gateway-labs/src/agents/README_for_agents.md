@@ -27,9 +27,9 @@ When you want to remove the agents keep in mind that:
 name: OpenAI_agent``` NOT the file name.
 
 ```bash
-orchestrate agents import -k native --name Claude_as_Judge
+orchestrate agents remove -k native --name Claude_as_Judge
 
 orchestrate agents remove -k native --name Gemini_2_agent
 
-orchestrate agents import -k native --name OpenAI_agent
+orchestrate agents remove -k native --name OpenAI_agent
 ```

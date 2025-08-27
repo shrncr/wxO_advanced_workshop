@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script adds the Claude Sonnet 4 model to the Orchestrate CLI.
+# This script adds the Claude Sonnet 4 model via the Orchestrate CLI.
 
 # Error handling
 # Exit on error
