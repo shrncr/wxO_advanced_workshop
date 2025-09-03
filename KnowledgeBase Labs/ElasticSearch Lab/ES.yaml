@@ -1,0 +1,19 @@
+spec_version: v1
+kind: knowledge_base 
+name: Esearch 
+description: >
+   This knowledge base contains the history of Ferrari. Use this knowledge based for queries related to ferrari.
+prioritize_built_in_index: false
+conversational_search_tool:
+   index_config:
+      - elastic_search:
+         url: https://1f64afb2-205e-46e3-adcf-365d9750e314.bkvfv1ld0bj2bdbncbeg.databases.appdomain.cloud
+         index: wx-f1
+         port: "30719"
+         #query_body: {"size":10,"query":{"bool":{"should":[{"text_expansion":{"ml.tokens":{"model_id":".elser_model_2_linux-x86_64","model_text":"$QUERY"}}}],"filter":"$FILTER"}}}
+         #result_filter: [{"match":{"title":"A_keyword_in_title"}},{"match":{"text":"A_keyword_in_text"}},{"match":{"id":"A_specific_ID"}}]
+         field_mapping:
+            title: title
+            body: text
+            
+            

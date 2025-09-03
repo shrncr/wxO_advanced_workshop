@@ -1,0 +1,18 @@
+spec_version: v1
+kind: knowledge_base
+name: ibm_knowledge_F1
+description: "This knowledge base contains detailed information about the F1 movie."
+prioritize_built_in_index: false
+conversational_search_tool:
+  index_config:
+    - milvus:
+        grpc_host: 
+        grpc_port: ""
+        database: default
+        collection: wx_f1
+        index: vector
+        embedding_model_id: sentence-transformers/all-minilm-l6-v2
+        limit: "10"
+        field_mapping:
+            title: document_name
+            body: text
