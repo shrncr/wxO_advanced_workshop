@@ -44,10 +44,17 @@ If the agent hangs or times out. Click to another agent in the drop down then cl
 
 Congratulations! You've completed the AI Gateway lab.
 
+## Using AI Gateway in SaaS instances
+
+This feature works locally and is already implemented in production for IBM Cloud SaaS instances ***(AWS instances?? - get answer for that)***. That means all you have to do is point your orchestrate ADK to your SaaS environment `orchestrate env activate <my_ibmcloud_wxo>` and then import the connections, models, and agents for this lab to have it working on the SaaS instances too! That is a giant advantage to watsonx Orchestrate to have this level of native agent support for any vendor's LLM. 
+
+Here are some other things to keep in mind as you [implement AI Gateway](https://connect.watson-orchestrate.ibm.com/acf/gateway/implementation-considerations) for your projects. 
+
+
 ## Cleaning up
 
-Each README file in `connections` `models` and `agents` folder has a section called **Cleanup** that will help you to remove the lab assets from your environment. You should to them in this order.
+Each README file in `connections` `models` and `agents` folder has a section called **Cleanup** that will help you to remove the lab assets from your environment. You should to them in this order, which is just the opposite of the import order. The reason is that if you stopped half way,let's say you removed the agents but wanted to test something that needed the models and connections to be present you still can. Also, it's the dependency order of agents need models need connection, so nothing gets out of sync in your environment with you or other collaborators trying to use those resources as you are removing them. 
 
-- Remove agents first
-- Remove models second
-- Remove connection third
+- Remove agents first with the [cleanup agents steps](src/agents/README_for_agents.md#cleanup)
+- Remove models second with the [cleanup models steps](src/models/README_for_models.md#cleanup)
+- Remove connection third with the [cleanup connections steps](src/connections/README_for_connections.md#cleanup)

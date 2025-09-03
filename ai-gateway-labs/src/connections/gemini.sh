@@ -18,7 +18,7 @@ orchestrate connections add -a gemini_creds
 # Configure the connection for the draft environment
 orchestrate connections configure -a gemini_creds --env draft -k key_value -t team
 # Set the credentials for the draft environment
-orchestrate connections set-credentials -a gemini_creds --env draft -e "api_key=$GEMINI_API_KEY" --env live -e "api_key=$GEMINI_API_KEY"
+orchestrate connections set-credentials -a gemini_creds --env draft -e "api_key=$GEMINI_API_KEY"
 
 ## Live environement setup (uncomment for SaaS deployment) ### ADK only supports draft env configurations
 

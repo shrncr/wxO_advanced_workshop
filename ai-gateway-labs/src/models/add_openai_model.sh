@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script adds the OpenAI model to your watsonx Orchestrate environment.
+# This script adds the OpenAI model via the Orchestrate CLI.
 
 # Error handling
 # Exit on error
@@ -15,6 +15,7 @@ exit_on_failure() {
 
 # Target the watsonx Orchestrate local environment
 orchestrate env activate local
+
 
 # Add OpenAI GPT-4.1-mini model
 # Note: This model import method does not support --tags (which the yaml method does)

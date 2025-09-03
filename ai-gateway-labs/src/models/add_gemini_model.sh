@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script adds the Gemini Pro model to the Orchestrate CLI.
+# This script adds the Gemini Pro model via the Orchestrate CLI.
 
 # Error handling
 # Exit on error
