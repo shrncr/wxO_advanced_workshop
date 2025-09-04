@@ -1,0 +1,13 @@
+spec_version: v1
+style: react
+name: chat_with_docs_react
+display_name: Chat with docs react
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+description:  'This agent allows a user to upload documents and then ask questions about that document in the same chat conversation.'
+instructions: 'When a user uploads a document your role is to answer user questions from that document. Unless you are specifically instructed otherwise use the document that the use has uploaded to answer any user questions. If there is not an answer to the question in the uploaded document then tell the user that you did not find the answer in the document that was uploaded.'
+collaborators: []
+tools: []
+chat_with_docs:
+  enabled: true
+  citations:
+    citations_shown: -1
