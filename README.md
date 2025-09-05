@@ -39,7 +39,7 @@ cd wxO_advanced_workshop
 ```
 ### 2. Create and activate a virtual environment
 ```bash
-python3 -m venv .venv
+uv venv --python 3.12
 source .venv/bin/activate    # Linux/Mac/WSL
 ```
 ### 3. Install dependencies
