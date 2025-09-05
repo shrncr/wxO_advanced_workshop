@@ -97,15 +97,10 @@ orchestrate connections add -a github-demo
 
 ```bash
 orchestrate connections configure \
-
 -a github-demo \
-
 --env draft \
-
 --kind key_value \
-
 --type team \
-
 --url https://github.com
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/7e72d114-90e4-49b6-b995-43772e71dc59/user_cropped_screenshot.png?tl_px=3,0&br_px=968,224&force_format=jpeg&q=100&width=965)
@@ -115,11 +110,8 @@ orchestrate connections configure \
 
 ```bash
 orchestrate connections set-credentials \
-
 -a github-demo \
-
 --env draft \
-
 -e GITHUB_PERSONAL_ACCESS_TOKEN=<YOUR_PAT>
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/8fc7d3f5-77b8-44ec-b5cf-51d6ea3ec748/user_cropped_screenshot.png?tl_px=0,0&br_px=1007,211&force_format=jpeg&q=100&width=1007)
@@ -142,19 +134,12 @@ We will now install the official GitHub MCP Server and make its tools available 
 17\. Paste: 
 ```bash
 orchestrate toolkits import \
-
 --kind mcp \
-
 --name github-mcp \
-
 --description "GitHub via MCP" \
-
 --package @modelcontextprotocol/server-github \
-
 --language node \
-
 --tools "*" \
-
 --app-id github-demo
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/fa1843b0-ec5e-46a1-8131-a6aa15ab9ccc/user_cropped_screenshot.png?tl_px=0,0&br_px=823,259&force_format=jpeg&q=100&width=823)
@@ -177,39 +162,28 @@ This agent will allow us to talk to GitHub in natural language and have the agen
 19\. Create a .yaml file in the directory you are currently in and paste+save:
 ```yaml
 spec_version: v1
-
 kind: native
-
 name: github_helper_react
-
 style: react
-
-llm: watsonx/meta/llama-3-8b-instruct
-
+llm: watsonx/meta/llama-3-2-3b-instruct
 description: 
-
-GitHub helper that uses the GitHub MCP toolkit to find repositories,
-
-summarize issues, and answer questions conversationally.
-
+  GitHub helper that uses the GitHub MCP toolkit to find repositories,
+  summarize issues, and answer questions conversationally.
 instructions: 
-
-- When asked about repositories, use the GitHub MCP tools to search/list them.
-
-- When asked about issues for a time window (e.g., "this week"), fetch and summarize them clearly.
-
-- Prefer compact tabular results, then a short summary.
-
-- Ask for confirmation before any write action.
-
+  - When asked about repositories, use the GitHub MCP tools to search/list them.
+  - When asked about issues for a time window (e.g., "this week"), fetch and summarize them clearly.
+  - Prefer compact tabular results, then a short summary.
+  - Ask for confirmation before any write action.
 tools: []
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/bc41e90d-b384-408f-8a5d-1eeb60f5aca2/user_cropped_screenshot.png?tl_px=36,0&br_px=1183,468&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,768)
 
 
-20\. Import the agent: 
+20\.**If you are not in the MCP LAB directory, cd there now** 
+
+Import the agent: 
 ```bash
-orchestrate agents import -f agents/github_helper.yaml
+orchestrate agents import -f ./github_helper.yaml
 ```
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/02ac635e-0622-41e9-a456-db960eadbb8a/user_cropped_screenshot.png?tl_px=0,16&br_px=1290,838&force_format=jpeg&q=100&width=1120.0)
@@ -284,12 +258,19 @@ orchestrate chat start
 
 32\. Import tools from MCP server
 
+**I suggest toggling mcpsearch_repositories & mcpcreate_repository but feel free to toggle actions you would like to explore**
+
+
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/56b20928-5316-4b5b-9c85-b052a08bed9a/screenshot.webp?tl_px=0,0&br_px=2930,1544&force_format=jpeg&q=100&width=1120.0)
 
 
-33\. Once tools have been added feel free to ask your agent "List my repositories", "Show open issues this week", or "What can you do for me?"
+33\. Once tools have been added feel free to ask your agent "List my repositories" or "What can you do for me?"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/a7511b40-c14b-4409-931a-24acf30a2ba0/ascreenshot.jpeg?tl_px=94,186&br_px=1470,956&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=748,511)
 
 
 Tip: Congrats you are all done! In this lab, we connected Orchestrate to GitHub using the Model Context Protocol (MCP). We created a secure GitHub connection, imported the MCP toolkit, and built a React-style agent that can call GitHub tools directly and allows us to interact with GitHub in natural language.
+
+Tip: Done early? Want to explore more with this agent?
+Feel free to add more GitHub MCP tools to this agent and see what actions you can have completed via Orchestrate conversational interface.
+
