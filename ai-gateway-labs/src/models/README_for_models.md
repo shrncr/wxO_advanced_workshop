@@ -18,15 +18,7 @@ orchestrate models import --file src/models/openai.yaml --app-id openai_creds
 
 ```
 
-## Cleanup
+You have completed Step 2 of the lab.
 
-The `--name` flag is all that is needed to remove the model but you need to know the name of the model so `orchestrate model list` is a fast way to check the model names.
-
-```bash
-orchestrate models remove --name virtual-model/anthropic/claude-opus-4-20250514
-
-orchestrate models remove --name virtual-model/google/gemini-2.5-flash 
-
-orchestrate models remove --name virtual-model/openai/gpt-4.1-mini 
-```
+Please proceed to [Step 3](../agents/README_for_agents.md) of the lab
 

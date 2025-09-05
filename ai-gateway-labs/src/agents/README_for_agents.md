@@ -19,17 +19,6 @@ orchestrate agents import --file src/agents/openai_agent.yaml
 orchestrate agents import --file src/agents/llm_as_judge.yaml
 ```
 
-## Cleanup
+Congratulations you have completed Step 3 of the lab.
 
-When you want to remove the agents keep in mind that:
-- ✅ The best practice is to ***remove the agents with collaborators*** first, so you don't inadvertently try to use it and the collaborators are already gone. 
-- 🧨 The `--name` flag requires the name defined in the yaml file ```yaml
-name: OpenAI_agent``` NOT the file name.
-
-```bash
-orchestrate agents remove -k native --name Claude_as_Judge
-
-orchestrate agents remove -k native --name Gemini_2_agent
-
-orchestrate agents remove -k native --name OpenAI_agent
-```
+Please proceed to the [Cleanup instructions](../../README%20ai-gateway-labs.md#Cleanup) for the lab.
