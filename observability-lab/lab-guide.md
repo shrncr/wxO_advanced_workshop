@@ -1,9 +1,9 @@
 # Configuring Langfuse Integration
-#### [Made by Sara Hrnciar with Scribe](https://scribehow.com/shared/Configuring_Langfuse_Integration__aRsQFGhcQQGvKJsHxe8h5g)
+#### 
 
 
 #### Creating Langfuse Project and Credentials
-
+ 
 
 1\. Navigate to [Langfuse](https://langfuse.com/) and click this button to log in or sign up
 
@@ -48,14 +48,12 @@
 #### Configuring Langfuse Integration with Orchestrate ADK
 
 
-9\. Open a new terminal
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/bde4d056-5aae-4dde-8a43-610e01a2e5ac/user_cropped_screenshot.webp?tl_px=0,0&br_px=1638,915&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=441,235)
-
+9\. Navigate to your integrated terminal in VSCode
+ 
 
 10\. Type the following into the terminal: 
 ```bash 
-orchestrate settings observability langfuse configure --url https://us.cloud.langfuse.com/api/public/otel --health-uri https://us.cloud.langfuse.com --project-id
+orchestrate settings observability langfuse configure --url https://us.cloud.langfuse.com/api/public/otel --health-uri https://us.cloud.langfuse.com --project-id=
 ```
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/7741245a-7eda-4f81-abe2-955a30dccd45/ascreenshot.jpeg?tl_px=141,0&br_px=1860,961&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,193)
 
@@ -75,7 +73,7 @@ orchestrate settings observability langfuse configure --url https://us.cloud.lan
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/7c09e3a5-f454-421a-9615-b13dc3375dbd/ascreenshot.jpeg?tl_px=0,126&br_px=1919,1200&force_format=jpeg&q=100&width=1120.0)
 
 
-14\. Continue typing the configuration command by typing `--api-key`
+14\. Continue typing the configuration command by typing `--api-key=`
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/42a2c378-3723-4079-8d3f-2326eb661c48/ascreenshot.jpeg?tl_px=544,0&br_px=1920,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=955,160)
 
@@ -90,23 +88,25 @@ orchestrate settings observability langfuse configure --url https://us.cloud.lan
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/e6dba3a7-1ede-46ef-bb0e-90f1081b5fe2/user_cropped_screenshot.webp?tl_px=84,0&br_px=1722,915&force_format=jpeg&q=100&width=1120.0)
 
 
-17\. Start the Orchestrate server by typing 
+17\. Start the Orchestrate server with Langfuse enabled by typing (the -l  argument means, "Yes, use langfuse!")
 ```bash 
-orchestrate server start -l --env-file=<./relative/path/to/env/file>; 
+orchestrate server start -l --env-file=./relative/path/to/env/file; 
 ```
 
 
-18\. Activate the environment for which you'd like to set up observability.
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/bd2b0959-6415-4a9f-972d-23547c1f17a5/user_cropped_screenshot.webp?tl_px=140,142&br_px=1779,1057&force_format=jpeg&q=100&width=1120.0)
+18\. Activate the environment for which you'd like to set up observability. For now, let's activate our local environment with the below command:
+```bash 
+orchestrate env activate local
+```
 
 
 #### Chat With Agents
+17\. Bring up your chat window by typing the following command in the terminal.
+```bash 
+orchestrate chat start 
+```
 
-
-19\. Open <https://dl.watson-orchestrate.ibm.com/> (TDS Orchestrate tenant) and enter your credentials
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/5718eb78-9aab-4557-ba73-a66c7d82d4ac/ascreenshot.jpeg?tl_px=0,202&br_px=1376,971&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=72,277)
+19\. Open <http://localhost:3000/> (local environment)
 
 
 20\. Chat with an agent of your choice. Langfuse will monitor all of your interactions with any agent in the activated environment.
@@ -165,3 +165,5 @@ orchestrate server start -l --env-file=<./relative/path/to/env/file>;
 30\. Click an observation
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/44acbdd6-6d8c-4f56-8527-9209765c3974/ascreenshot.jpeg?tl_px=204,171&br_px=1187,721&force_format=jpeg&q=100&width=983&wat_scale=87&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=352,234)
+
+

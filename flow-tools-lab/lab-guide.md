@@ -309,7 +309,7 @@ def build_f1_flow(aflow: Flow = None) -> Flow:
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-02/1d0a2862-6fbd-494f-8332-405e3ab7ccd7/user_cropped_screenshot.webp?tl_px=0,0&br_px=1428,1043&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=644,689)
 
 
-35\. You will be given a 16-Character long app password. Press `ctrl + c` to copy this and store it in a safe space
+35\. You will be given a 16-Character long app password. Press `ctrl + c` or `command + c` to copy this and store it in a safe space
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-02/88e42729-e58c-403a-8fdc-a7e98cb24154/user_cropped_screenshot.webp?tl_px=0,0&br_px=1428,1043&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=634,298)
 
