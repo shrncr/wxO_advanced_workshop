@@ -40,13 +40,6 @@ environments:
           header:
             content-type: application/x-www-form-urlencoded
 ```
+You have completed Step 1 of the lab.
 
-## Cleanup
-
-```bash
-orchestrate connections remove --app-id openai_creds
-
-orchestrate connections remove --app-id gemini_creds
-
-orchestrate connections remove --app-id claude_creds
-```
+Please proceed to [Step 2](../models/README_for_models.md) of the lab

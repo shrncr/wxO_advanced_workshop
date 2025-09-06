@@ -53,8 +53,50 @@ Here are some other things to keep in mind as you [implement AI Gateway](https:/
 
 ## Cleaning up
 
-Each README file in `connections` `models` and `agents` folder has a section called **Cleanup** that will help you to remove the lab assets from your environment. You should do them in this particular order, which is just the opposite of the import order. The reason is that if you stopped half way,let's say you removed the agents but wanted to test something that needed the models and connections to be present you still can. Also, it's the dependency order of agents need models need connection, so nothing gets out of sync in your environment with you or other collaborators trying to use those resources as you are removing them. 
+`NOTE:` Don't do this until the end of the workshop. 
 
-- Remove agents first with the [cleanup agents steps](src/agents/README_for_agents.md#cleanup)
-- Remove models second with the [cleanup models steps](src/models/README_for_models.md#cleanup)
-- Remove connection third with the [cleanup connections steps](src/connections/README_for_connections.md#cleanup)
+It's a good idea to learn how to clean up your work from an environment via the ADK CLI commands. You should do them in this particular order, which is just the opposite of the import order. The reason is that if you stopped half way,let's say you removed the agents but wanted to test something that needed the models and connections to be present you still can. Also, it's the dependency order of agents need models need connection, so nothing gets out of sync in your environment with you or other collaborators trying to use those resources as you are removing them. 
+
+### Remove agents first
+
+
+When you want to remove the agents keep in mind that:
+- ✅ The best practice is to ***remove the agents with collaborators*** first, so you don't inadvertently try to use it and the collaborators are already gone. 
+- 🧨 The `--name` flag requires the name defined in the yaml file ```yaml
+name: OpenAI_agent``` NOT the file name.
+
+```bash
+orchestrate agents remove -k native --name Claude_as_Judge
+
+orchestrate agents remove -k native --name Gemini_2_agent
+
+orchestrate agents remove -k native --name OpenAI_agent
+```
+
+### Remove models second
+
+`NOTE:` Don't do this until the end of the workshop.
+
+The `--name` flag is all that is needed to remove the model but you need to know the name of the model so `orchestrate model list` is a fast way to check the model names.
+
+```bash
+orchestrate models remove --name virtual-model/anthropic/claude-opus-4-20250514
+
+orchestrate models remove --name virtual-model/google/gemini-2.5-flash 
+
+orchestrate models remove --name virtual-model/openai/gpt-4.1-mini 
+```
+
+### Remove connection third 
+
+```bash
+orchestrate connections remove --app-id openai_creds
+
+orchestrate connections remove --app-id gemini_creds
+
+orchestrate connections remove --app-id claude_creds
+```
+
+And that's it!
+
+## Congratulations you have finished the ai-gateway-lab!
