@@ -21,4 +21,4 @@ orchestrate agents import --file src/agents/llm_as_judge.yaml
 
 Congratulations you have completed Step 3 of the lab.
 
-Please proceed to the [Cleanup instructions](../../README%20ai-gateway-labs.md#Cleanup) for the lab.
+Please proceed to [Step 4](../../README%20ai-gateway-labs.md) of the lab.
