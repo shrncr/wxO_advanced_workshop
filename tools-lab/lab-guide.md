@@ -2,7 +2,7 @@
 
 In this lab, you'll build a Python-based web search tool using the Tavily API and Orchestrate ADK. You'll:
 
-1. Write the code for the tool
+1. Write the python code for the tool
 
 2. Use the Orchestrate Connections Vault to securely access your API key
 
@@ -11,6 +11,16 @@ In this lab, you'll build a Python-based web search tool using the Tavily API an
 4. Import your tool and agent into an Orchestrate environment of your choice
 
 Note: You must complete the previous lab (where you set up your Tavily API connection) before starting this one.
+
+> ⚠️ **Important Alert: Python Indentation**
+>
+> In this lab guide, you will see both **screenshots** and **code snippets**.  
+> Python relies heavily on **whitespace and indentation**. If indentation is off, your code will throw errors (such as `IndentationError` or unexpected behavior).
+>
+> ✅ **Always copy code from the code snippets, not from screenshots.**  
+> After pasting, double-check that the indentation matches exactly.
+>
+> If you see errors related to indentation, carefully re-align the code before running it.
 
 1\. Navigate to the tools-lab folder, open the tools folder, and then open web_search.py
 
@@ -159,15 +169,53 @@ Remember to press `Ctrl + S` to save your file.
 ```bash
 orchestrate tools import -f ./tools-lab/tools/web_search_tool/web_search.py -r ./tools-lab/tools/web_search_tool/requirements.txt -k python --app-id tavily
 ```
+15\. Ensure your virtual environment is activated, orchestrate server is running, and that you are connected to your local environment. 
 
 
-16\. In your terminal and from the wXO_advanced_workshop directory, type the command below to import your web_search tool
+16\. In your terminal and from the wXO_advanced_workshop directory, type the command below to import your web_search tool. 
 
 ```bash 
 orchestrate agents import -f ./tools-lab/agents/agent.yaml
 ```
 
 
-17\. Open http://localhost:3000/ and chat with your web_researcher agent!
+17\. Open http://localhost:3000/ and chat with your web_researcher agent! If localhost is not running, remember to run `orchestrate chat start"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/cb01723b-79f2-4b5f-9b8e-1169d7930f75/screenshot.webp?tl_px=0,0&br_px=1218,820&force_format=jpeg&q=100&width=1120.0)
+
+# Recap & Next Steps
+
+In this lab, you created a Python-based web search tool with the Tavily API and integrated it into Orchestrate. Along the way, you worked with:
+
+
+- The Tavily client to query search results programmatically
+
+- Agent specs and tool specs to connect your tool into an Orchestrate environment
+
+You now have a repeatable pattern for adding external APIs into agents and showcasing them in live environments. When building demos or proof-of-concepts, this skill helps you:
+
+- Show customers how Orchestrate can quickly extend to third-party services
+
+- Use real search results to ground agent responses in fresh data
+
+- Create flexible demos where you can adapt the tool to different industries, use cases, or data needs
+
+
+## Challenge
+
+To take this further, explore the Tavily API Playground:
+
+1. Go to the Tavily API Playground
+.
+
+1. Use the UI to change the filters — for example, adjust sources, date ranges, or result types.
+
+3. Notice how the Playground automatically generates a code snippet for your custom query!
+
+👉 Try copying one of these snippets back into your web_search.py function and rerun your tool.
+
+> Reflect:
+>
+>How does changing filters change the quality and type of data you get back?
+>
+>How could you use this to adapt a demo for different customer scenarios?
