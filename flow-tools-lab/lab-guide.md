@@ -1,9 +1,20 @@
 # Building Flow Tools in Orchestrate
-### [Made by Sara Hrnciar with Scribe](https://scribehow.com/shared/Building_Flow_Tools_in_Orchestrate__VWgEpFh3TiuwChND3qwyjg)
+
 This lab guide will walk you through creating a flow tool in the ADK. The tool will:
 1. Perform a web search for the most recent Formula 1 event  
 2. Use a generative node to write an exciting email update  
 3. Send the email to a chosen recipient  
+
+> ⚠️ **Important Alert: Python Indentation**
+>
+> In this lab guide, you will see both **screenshots** and **code snippets**.  
+> Python relies heavily on **whitespace and indentation**. If indentation is off, your code will throw errors (such as `IndentationError` or unexpected behavior).
+>
+> ✅ **Always copy code from the code snippets, not from screenshots.**  
+> After pasting, double-check that the indentation matches exactly.
+>
+> If you see errors related to indentation, carefully re-align the code before running it.
+
 
 ### Exploring the Files
 
@@ -352,7 +363,7 @@ orchestrate tools import -k python -f ./tools/gmail.py --app-id gmail
 ### Importing Your Web_Search Tool
 
 
-**Alert: We configured Tavily credentials and a web search tool in previous labs. You DO NOT need to re-configure Tavily if you have done so already. IF YOU HAVE COMPLETED THE TOOLS LAB, you only need to follow the instructions for the gmail credentials and tool**
+> **Alert: We configured Tavily credentials and a web search tool in previous labs. You DO NOT need to re-configure Tavily if you have done so already. IF YOU HAVE COMPLETED THE TOOLS LAB, you only need to follow the instructions for the gmail credentials and tool**
 
 #### The following instructions will take place in either Ubuntu or ZSh terminal. Step 44 assumes you are working from the flow-tools-lab directory
 
@@ -399,7 +410,7 @@ orchestrate env activate local
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-02/9d8c9cb2-cc06-47a2-abcd-38b784d1f0e3/ascreenshot.jpeg?tl_px=561,59&br_px=1938,828&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=611,276)
 
 
-48\. Press `Ctrl + S` to save your changes
+48\. Press `Ctrl + S` or `Command + S` to save your changes
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-02/26b48c7c-be9a-4f13-a415-c0b4cbcf980b/ascreenshot.jpeg?tl_px=0,0&br_px=1938,1083&force_format=jpeg&q=100&width=1120.0)
 
@@ -496,3 +507,28 @@ orchestrate agents import -f ./agents/agent.yaml
 65\. And then the workflow will kick off and send out an F1 Update!
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-02/5bb71121-aff7-42a3-aa6a-d3ea73b9ef57/user_cropped_screenshot.webp?tl_px=321,156&br_px=1350,731&force_format=jpeg&q=100&width=1030&wat_scale=91&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=445,381)
+
+# Recap & Next Steps
+
+In this lab, you built a flow tool in Orchestrate using the ADK. You combined multiple nodes — a web search, a generative prompt, and a Gmail integration — into a working system that automatically emails a Formula 1 race update. Along the way, you:
+
+- Explored how different node types (tool, prompt, flow) can be chained together.
+
+- Used schemas to clearly define inputs and outputs for each step.
+
+- Learned how to import tools, configure connections, and attach your flow to an agent.
+
+This type of orchestration is powerful for customer-facing scenarios. Instead of just showing an agent responding in chat, you can demo end-to-end automation: pulling data, generating value-added content, and delivering it through a real channel (like email). It shows customers how Orchestrate can be both flexible and production-ready, with flows that map directly to real business processes.
+
+## Challenge
+
+Now it’s your turn to extend the flow. Try one of the following:
+
+- Scheduling: Check the ADK documentation
+ and make your flow schedulable. For example, set it to run automatically at the end of the next Formula 1 race.
+
+- Human-in-the-loop: Add a UserNode so a human can approve or edit the email before it’s sent.
+
+- Customize: Add a new node of your choice — maybe a summary step, a translation step, or a Slack notification.
+
+👉 The goal is to experiment with how flows can be adapted to different customer scenarios. Think about how each adjustment could strengthen your demos or open new conversations in a sales cycle.
