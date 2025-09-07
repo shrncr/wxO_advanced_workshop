@@ -48,34 +48,34 @@
 #### Configuring Langfuse Integration with Orchestrate ADK
 
 
-9\. Navigate to your integrated terminal in VSCode
+9\. Navigate to your integrated terminal in VSCode. 
+
+9\. Ensure your venv is activated with the following command from the `wxO_advanced_workshop` directory
+
+```bash 
+source ./.venv/bin/activate
+```
  
 
-10\. Type the following into the terminal: 
+10\. Type the following into the terminal, but **do not** yet hit enter: 
 ```bash 
 orchestrate settings observability langfuse configure --url https://us.cloud.langfuse.com/api/public/otel --health-uri https://us.cloud.langfuse.com --project-id=
 ```
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/7741245a-7eda-4f81-abe2-955a30dccd45/ascreenshot.jpeg?tl_px=141,0&br_px=1860,961&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,193)
+
 
 
 11\. Navigate back to the langfuse project page
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/f9cd0943-d8d3-4228-9018-324ed6ba696c/user_cropped_screenshot.webp?tl_px=49,0&br_px=1373,739&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=358,26)
 
-
-12\. Press `Ctrl + C` on this part of the page url to copy the project ID
+12\. Press `Ctrl + C` or `Command + C` on this part of the page url to copy the project ID
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/bdb91897-0cbd-43f5-a09a-d5df2d692547/ascreenshot.jpeg?tl_px=126,0&br_px=1034,507&force_format=jpeg&q=100&width=907)
 
 
-13\. Press `Ctrl + V` to paste the project id
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/7c09e3a5-f454-421a-9615-b13dc3375dbd/ascreenshot.jpeg?tl_px=0,126&br_px=1919,1200&force_format=jpeg&q=100&width=1120.0)
+13\. Press `Ctrl + V` or `Command + V` to paste the project id back into your integrated terminal. **Do not** yet hit enter
 
 
 14\. Continue typing the configuration command by typing `--api-key=`
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/42a2c378-3723-4079-8d3f-2326eb661c48/ascreenshot.jpeg?tl_px=544,0&br_px=1920,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=955,160)
 
 
 15\. Go back to Langfuse and copy the **Secret Key**
@@ -83,9 +83,12 @@ orchestrate settings observability langfuse configure --url https://us.cloud.lan
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/59f0b682-631d-4aec-bcfc-8037a7a6a331/user_cropped_screenshot.webp?tl_px=0,0&br_px=1920,1200&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=1025,276)
 
 
-16\. Paste your Secret Key into the terminal and press `Return`
+16\. Paste your Secret Key into the terminal and press `Return`. Your final command should look something like this:
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/e6dba3a7-1ede-46ef-bb0e-90f1081b5fe2/user_cropped_screenshot.webp?tl_px=84,0&br_px=1722,915&force_format=jpeg&q=100&width=1120.0)
+```bash
+orchestrate settings observability langfuse configure  --url "https://us.cloud.langfuse.com/api/public/otel"  --health-uri "https://us.cloud.langfuse.com"  --project-id "$LANGFUSE_PROJECT_ID" --api-key "$LANGFUSE_API_KEY"
+```
+
 
 
 17\. Start the Orchestrate server with Langfuse enabled by typing (the -l  argument means, "Yes, use langfuse!")
@@ -167,3 +170,28 @@ orchestrate chat start
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/44acbdd6-6d8c-4f56-8527-9209765c3974/ascreenshot.jpeg?tl_px=204,171&br_px=1187,721&force_format=jpeg&q=100&width=983&wat_scale=87&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=352,234)
 
 
+# Recap & Next Steps
+
+In this lab, you connected Orchestrate to Langfuse and saw firsthand how observability can give you a clear window into agent behavior. You configured integrations, chatted with agents, and explored how traces and observations reveal exactly what’s happening inside each interaction.
+
+By showing customers what’s happening under the hood of an AI agent, you can:
+
+- Highlight transparency and trust by walking them through traces.
+
+- Show how issues can be diagnosed quickly, reducing risk.
+
+- Position observability as a way to measure and prove value, not just to monitor.
+
+- Create more compelling stories when presenting solutions — because you can back them up with data.
+
+The more you can show customers the why behind a system’s behavior, the more powerful your demos and PoCs become, and the more you can prove IBM is *trusted* for enterprise AI
+
+## Optional Challenge!
+
+Now that you’ve seen observability in action, try this experiment:
+
+Chat with a React-style Agent – This agent makes its reasoning visible step by step. Notice how the traces align with the reasoning chain, making it easy to explain decisions.
+
+Chat with a non-React Agent – This one gives results directly, with less visibility into its process. Look at the traces and compare what you can and can’t see.
+
+👉 Reflect: Which experience feels more trustworthy and demo-friendly? How might you use these differences in a customer conversation?
