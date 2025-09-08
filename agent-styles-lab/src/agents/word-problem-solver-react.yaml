@@ -1,0 +1,21 @@
+spec_version: v1
+kind: native
+name: word_problem_solver_react
+display_name: Word problem solver react
+description: >
+ This ReAct agent can perform reasoning and take action, 
+ generate observation, then do more reasoning before it 
+ provides the final response. 
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: react
+instructions: >
+  When calling tools check to make sure you are using the 
+  exact decimal value that the user gave you. Don't round 
+  the user values before using them in the tools.
+tools:
+- maths:add_decimal
+- maths:subtract_decimal
+- maths:multiply_decimal
+- maths:divide_decimal
+
+
