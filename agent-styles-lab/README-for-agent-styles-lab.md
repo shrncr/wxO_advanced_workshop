@@ -353,7 +353,7 @@ Now it's time to hit the button to reset the agent's chat Preview.
 
 Then try the prompt again. 
 
-```txt
+```text
 Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
@@ -411,7 +411,7 @@ Now that we are back to a familiar place we can see that the agent's description
 
 Now the let's try our prompt again. 
 
-```txt
+```text
 Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
@@ -481,7 +481,7 @@ Remember, probablistic, not deterministic. So your results may vary.
 
 My example just finished the last steps of subtraction and then finally division in as part of the answer like this:
 
-```txt
+```text
 Next, we subtract the total amount spent from Alex's initial amount: $15.50 - $8.80 = $6.70.
 
 Finally, we divide the remaining amount by 4 to find the amount each friend receives: $6.70 / 4 = $1.675.
@@ -489,7 +489,7 @@ Finally, we divide the remaining amount by 4 to find the amount each friend rece
 
 And produced the correct answer of:
 
-```txt
+```text
 So each friend receives $1.675 to spend on a snow cone.
 ```
 
@@ -522,8 +522,8 @@ orchestrate agents import -f src/agents/word-problem-solver-final.yaml
 ```
 and try it out with our prompt:
 
-```txt
-Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns.Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
+```text
+Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
 Here's what I got on the final version, my `reliability phase` agent.
