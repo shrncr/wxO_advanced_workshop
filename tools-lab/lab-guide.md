@@ -70,7 +70,6 @@ def web_search(query: str) -> dict:
 
     Args:
         query (str): The search query string.
-        url (str): the url where search results must come from
 
     Returns:
         dict: A dictionary of search results obtained from Tavily search.
@@ -135,7 +134,7 @@ if a response is successfully generated, then it is returned to the agent.
 10\. Add this line inside your `except` block. It will print out the error message if something goes wrong, which helps you understand what the problem is.
 
 ```python
-       return (f"Unexpected Error: {e}")
+       return {"error": str(e)}
 ```
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/600605d0-b5bd-416a-925a-619151d8bf41/ascreenshot.jpeg?tl_px=267,38&br_px=1644,807&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,277)

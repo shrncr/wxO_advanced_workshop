@@ -9,7 +9,6 @@ def web_search(query: str) -> dict:
 
     Args:
         query (str): The search query string.
-        url (str): the url where search results must come from
 
     Returns:
         dict: A dictionary of search results obtained from Tavily search.
@@ -20,4 +19,4 @@ def web_search(query: str) -> dict:
         response = tavily_client.search(query=query, max_results=5, include_answer=True)
         return response
     except Exception as e:
-       return (f"Unexpected Error: {e}")
+       return {"error": str(e)}
