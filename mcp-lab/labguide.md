@@ -83,7 +83,8 @@ orchestrate env activate local
 
 #### Create secure connection in Orchestrate
 
-
+Tip: We will now store our Personal Access Token (PAT) securely so the toolkit can access GitHub
+Below is the step-by-step walkthrough
 
 13\. Create the shell connection: 
 ```bash
@@ -159,7 +160,9 @@ orchestrate toolkits list
 This agent will allow us to talk to GitHub in natural language and have the agent decide which MCP tools to call.
 
 
-19\. Create a .yaml file in the directory you are currently in and paste+save:
+19\. **No need to take action here. Please take a moment to visually review the agent file**
+
+Navigate to the github_helper.yaml file in the mcp-lab folder. Review the type and description.
 ```yaml
 spec_version: v1
 kind: native
@@ -197,7 +200,7 @@ orchestrate agents list
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/de2f53b8-9e5a-4f20-bd0b-778bcc09ebf9/user_cropped_screenshot.png?tl_px=0,124&br_px=1239,894&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=374,637)
 
 
-#### Enable the MCP Tools for the agent (UI)
+#### Enabling the MCP Tools for the agent
 
 
 Tip: We will now Turn on the GitHub MCP Tools for the created agent
@@ -251,7 +254,7 @@ orchestrate chat start
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/11303fb9-f68e-4290-8479-cb9f7fe3978e/user_cropped_screenshot.png?tl_px=0,0&br_px=2926,1344&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=949,173)
 
 
-31\. Click "Connect" & "Done"
+31\. Click "Connect & Done". Then close "Edit MCP Server" window with the X in the upper right hand corner.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/fc1d0b5c-6ee8-4dfa-bc7b-b838ea574807/user_cropped_screenshot.png?tl_px=0,0&br_px=2936,1678&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=156,499)
 
