@@ -62,7 +62,7 @@ def web_search(query: str) -> dict:
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/acd63230-603c-4815-8f43-df5af8b18de3/user_cropped_screenshot.webp?tl_px=183,47&br_px=1123,573&force_format=jpeg&q=100&width=940&wat_scale=83&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=230,203)
 
 
-5\. Add a header to the top of your function. This will describe the tool, and explain the inputs and outputs of the function. YOu may use mine, or create your own.
+5\. Add a header to the top of your function. This will describe the tool, and explain the inputs and outputs of the function. You may use mine, or create your own.
 
 ```python
     """
