@@ -295,7 +295,7 @@ def build_f1_flow(aflow: Flow = None) -> Flow:
 
 
 ### Getting Credentials for Gmail
-
+>If you don't have a gmail account already, you can follow my lab guide on creating a gmail account here:  [creating-new-gmail.md](./creating-new-gmail.md "Gmail account how to")
 
 30\. Navigate back to gmail.py and Press `Ctrl + C` on the link provided in line 25
 
