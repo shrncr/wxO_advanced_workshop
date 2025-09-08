@@ -1,0 +1,16 @@
+spec_version: v1
+kind: native
+name: word_problem_solver
+display_name: Word problem solver
+description: >
+ This Default agent can solve word problems with the attached math tools. 
+llm: watsonx/meta-llama/llama-3-2-90b-vision-instruct
+style: default
+instructions: ''
+tools:
+- maths:add_decimal
+- maths:subtract_decimal
+- maths:multiply_decimal
+- maths:divide_decimal
+
+
