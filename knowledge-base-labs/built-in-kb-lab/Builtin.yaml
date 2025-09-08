@@ -5,7 +5,7 @@ description: >
    This knowledge base contains information on the history of F1 Racing
 #Below, you can change the path to your file that is being uploaded into the knowledge base. You can also upload multiple files at a time. You may need to change this to the full path of your file if Orchestrate can not find this.
 documents:
-   - /Users/collinstiffler/Documents/LABS/WxOADK/TestADK/f1hist.pdf
+   - /Users/sophiasouthard/Desktop/wxO_advanced_workshop/knowledge-base-labs/built-in-kb-lab/f1hist.pdf
 #Below, you can change a few model parameters such as the embedding model and the chunk size/overlap.
 vector_index:
    embedding_model_name: virtual-model/openai/text-embedding-3-small
