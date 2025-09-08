@@ -166,8 +166,8 @@ And scrolling down to the tools section of the agent you should see:
 
 Now it is time to try our prompt:
 
-```txt
-Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns.Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
+```text
+Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
 Because agentic solutions are probablistic meaning they can vary from run to run as opposed to deterministic. For example python programs are deterministic, you alway get the same predictable result. Therefore, with our probablistic agentic agent you should see _something_ like this:
@@ -191,7 +191,9 @@ Now it's time to open the `Show Reasoning` drop down. I know you are already cur
 
 These are what I got. 🚨 Yours may be different, remember probablistic, not deterministic. But the analysis I do below is what's important for you to learn how to do.
 
-Reasoning Step 1:
+So let's examine what happened in each reasoning step. 
+
+### Reasoning Step 1:
 
 Tool: multiply_decimal
 
@@ -209,11 +211,8 @@ Output:
   "data": "meta=None content=[TextContent(type='text', text='4.0', annotations=None, meta=None)] structuredContent={'result': 4.0} isError=False"
 }
 ```
-So let's examine what happened in each reasoning step. 
 
-### Reasoning step 1
-
-**Daniel's interpretation:** That's telling me that the agent is trying figure out the part where we have 4 turns at the ring toss game that cost $1.25 each. The tool it calls `multiply_decimal` which is the correct tool, however, I can see that it is rounding the $1.25 down to 1. Which gives it a solution of 4. 
+**Daniel's interpretation:** That's telling me that the agent is trying figure out the part where we have 4 turns at the ring toss game that cost $1.25 each. The tool it calls `multiply_decimal` is the correct tool for this step, however, I can see that it is rounding the $1.25 down to 1. So the inputs are 1 and 4, Which gives it a solution of 4. 
 
 For the output I can see that it is creating a kind of scratch pad for itself and storing the data from that step. Specifically, I can see that the following fields:
 
@@ -225,10 +224,10 @@ For the output I can see that it is creating a kind of scratch pad for itself an
 
 My take away:
 
-- GOOD: The model correctly identified the first step in solving the word problem.
+- GOOD: The model correctly identified the first step in solving the word problem. Multiply game plays by cost. 
 - GOOD: The model called the right tool to solve the first step in the word problem, which is multiplication of ring toss turns times cost of each turn.
 - BAD: The Output has a `result` of 4.0 (should be 5)
-- BAD: I need to address that the model likes to round down the inputs to the tool call. I can see that it sent 1 to the input of the tool instead of 1.25 which is the cost of the turn. Maybe it just likes integers?
+- BAD: I need to address that the model likes to round down the inputs to the tool call. I can see that it sent 1 to the input of the `multiply_decimal` tool instead of 1.25 which is the cost of the turn. Maybe it just likes integers?
 
 ### Reasoning step 2:
 
@@ -355,7 +354,7 @@ Now it's time to hit the button to reset the agent's chat Preview.
 Then try the prompt again. 
 
 ```txt
-Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns.Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
+Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
 Here is what I got:
@@ -372,7 +371,7 @@ Remember that the `Default` agent style relys on the model's ***intrinsic*** abi
 
 Well something about this model's ***intrinsic*** ability is telling it to take rounding shortcuts. Which is not what we want. But that doesn't mean this model is hopeless for our purposes. Let's see what else we can do to tune it up. 
 
-After exhausting my creativity on some more `instruction` variations it's time to take a bigger step and try moving to a `ReAct` style agent.
+After exhausting your creativity on some more `instruction` variations it's probably time to take a bigger step and try moving to a `ReAct` style agent.
 
 
 ### Step 5: Continue with agent `debug phase`
@@ -413,14 +412,14 @@ Now that we are back to a familiar place we can see that the agent's description
 Now the let's try our prompt again. 
 
 ```txt
-Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns.Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
+Using your tools solve this word problem. The school carnival is in town! Four friends—Alex, Ben, Chloe, and Dana—decide to pool their money to buy some treats and play games. First, they want to play the ring toss game, which costs $1.25 per turn. They each want one turn, so they buy 4 turns. Next, they head to the snack stand. They buy one giant pretzel to share for $3.80. Alex had $15.50 in his wallet, and he used it to pay for the game turns and the pretzel. After he gets his change, the four friends decide to split the remaining amount equally so they can each buy a snow cone later. How much money does each friend receive to spend on a snow cone?
 ```
 
 Here's what I got, remember probabalistic, your results may be a bit different:
 
 ![react agent style](resources/style-react.png)
 
-Now, when I prompted the react version of the agent I did get the correct answer. Let's examine the steps that I got to see what is DIFFERENT about ReAct agents versus Default agents. And remember this is the SAME model `llama-3-2-90b-vision-instruct` so changing the agent style did something significant to improve our agent's accuracy. 
+Now, when I prompted the react version of the agent I did get the correct answer. Let's examine the Reasoning steps that I got to see what is DIFFERENT about ReAct agents versus Default agents. And remember this is the SAME model `llama-3-2-90b-vision-instruct` so changing the agent style to `ReAct` did something significant to improve our agent's accuracy. 
 
 🚨 These are the Reasons steps I got, remember probablistic, not deterministic so your results may be different. 
 
@@ -437,27 +436,24 @@ Input:
 ```
 
 Output:
-```json
+```txt
 Observation: {'data': "meta=None content=[TextContent(type='text', text='5.0', annotations=None, meta=None)] structuredContent={'result': 5.0} isError=False"}
 ```
 **Daniel's interpretation:** That's telling me that the agent is trying to figure how much money was spent on ring toss game. And this time with the same model we are getting decimals to the tool inputs. So it is taking a step like a tool call then observing it that is helping it solve the problem. If not then it can refine the approach. Apparently this model does have the ability to do decimals as inputs to tools but that is not its ***intrinsic*** behavior. 
 
 **KEY DIFFERENCE of ReAct style:** The ability for the model to think, act, observe and refine its approach until a task is completed.  
 
-Instead, react style agents, have the ability to do an ***Observation*** after each step. This reflection of the step breaks it from following just its own ***intrinsic*** nature and helps it to refine the result. This can take more time and tokens to achieve but the results can be very differentiated versus the Default style.
+ReAct style agents, have the ability to do an ***Observation*** after each step. This reflection of the step breaks it from following just its own ***intrinsic*** nature, reflect if it is following your instructions more closely after each step, and helps it to refine the result. This can take more time and tokens to achieve but the results can be very differentiated versus the Default style.
 
-The Default style agent by contrast would make a plan and follow that plan mostly using its ***intrinsic*** behaviors, such as rounding to integers for faster math. 
-
-
+The Default style agent by contrast would make a plan and follow that plan mostly using its ***intrinsic*** behaviors, such as rounding to integers for faster math. Seemingly its ***intrisic*** abilities are more important than your instructions when doing agentic patterns like understand, plan, and call tools and knowledge. This can be great IF your model has the RIGHT ***intrinsic*** abilities you need to solve a problem. 
 
 My take away:
 
-- GOOD: It knows how to break ALL the problem steps
+- GOOD: It knows how to break down ALL the problem steps
 - GOOD: It called the right tools to do the individual steps
 - GOOD: It got the right result of 1.675
-- BAD: The last step should really be a valid amount of money, in cents, which this is not. Obviously the people can't split a penny. 
+- BAD: The last step should really be a valid amount of money, in cents, which this is not. Obviously the people can't split a penny.  
 
-If you didn't get the correct result you may need to do some additional tweaking on the instructions. I did that and came up with a final version that I'm happy with `word-problem-solver-final.yaml`. At this point I would begin the `reliability phase` of development on this agent and start testing other prompts to see if they are also solved by the agent. 
 
 ### Reasoning step 2:
 
@@ -496,6 +492,10 @@ And produced the correct answer of:
 ```txt
 So each friend receives $1.675 to spend on a snow cone.
 ```
+
+If you didn't get the correct result you may need to do some additional tweaking on the instructions.
+
+I did that and came up with a final version that I'm happy with `word-problem-solver-final.yaml`. So my agent is giving the right answer for the word problem prompt I have been using. At this point I would begin the `reliability phase` of development on this agent and start testing other prompts to see if they are also solved by the agent. 
 
 ## Step 5: Continue to agent `reliability phase`
 
