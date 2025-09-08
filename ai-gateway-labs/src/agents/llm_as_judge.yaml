@@ -14,7 +14,7 @@ instructions: |-
 
   Make a table of both agents responses that has two columns, Agent and Response from agent. Then populate that table with the results from both agents and their responses and present to the user.
 
-  Last, give your opinion of which story is better. Be concise in your option.
+  Last, give your opinion of which story is better. Be concise in your opinion.
 guidelines: []
 collaborators:
 - OpenAI_agent
