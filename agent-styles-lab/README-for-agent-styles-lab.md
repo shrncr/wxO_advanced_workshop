@@ -471,7 +471,7 @@ Input:
 ```
 Output:
 
-```json
+```text
 Observation: {'data': "meta=None content=[TextContent(type='text', text='8.8', annotations=None, meta=None)] structuredContent={'result': 8.8} isError=False"}
 ```
 
@@ -530,7 +530,7 @@ Here's what I got on the final version, my `reliability phase` agent.
 
 ![agent final - reliability phase](resources/reliability-phase-agent.png)
 
-This is definitely an iterative process and can lead to the need to create a **supervisor agent** to classify different types of word problems and then send them to a subordinate collaborator agents which are tuned for solving different kinds of word problems. 
+The `reliability phase` is definitely an iterative process and can lead to the need to create a **supervisor agent** to classify different types of word problems and then send them to a subordinate collaborator agents which are tuned for solving different kinds of word problems. 
 
 For example this agent only has simple addition, subtraction, multiplication, and division tools but what if the problem was about geometry? In that case it would fail. Take a deep breath and pat your back. You learned a lot of fundamental agentic techniques in this lab which will give you a solid foundation to try more advanced agentic patterns with watsonx Orchestrate. 
 
