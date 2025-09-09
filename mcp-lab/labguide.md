@@ -126,41 +126,13 @@ orchestrate connections list
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/86fc54ed-998f-4f93-89d6-0bb20b74f427/user_cropped_screenshot.png?tl_px=0,0&br_px=796,162&force_format=jpeg&q=100&wat_scale=71&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=363,132)
 
 
-#### Import the GitHub MCP Toolkit
-
-
-We will now install the official GitHub MCP Server and make its tools available to agents
-
-
-17\. Paste: 
-```bash
-orchestrate toolkits import \
---kind mcp \
---name github-mcp \
---description "GitHub via MCP" \
---package @modelcontextprotocol/server-github \
---language node \
---tools "*" \
---app-id github-demo
-```
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/fa1843b0-ec5e-46a1-8131-a6aa15ab9ccc/user_cropped_screenshot.png?tl_px=0,0&br_px=823,259&force_format=jpeg&q=100&width=823)
-
-
-18\. Verify:
-```bash
-orchestrate toolkits list
-```
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/e51f8359-4e49-47ad-b7cd-bbc5b469a69c/user_cropped_screenshot.png?tl_px=0,0&br_px=1093,412&force_format=jpeg&q=100&wat_scale=97&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=843,-301)
-
-
 #### Create & Import GitHub React-style agent
 
 
 This agent will allow us to talk to GitHub in natural language and have the agent decide which MCP tools to call.
 
 
-19\. **No need to take action here. Please take a moment to visually review the agent file**
+17\. **No need to take action here. Please take a moment to visually review the agent file**
 
 Navigate to the github_helper.yaml file in the mcp-lab folder. Review the type and description.
 ```yaml
@@ -182,7 +154,7 @@ tools: []
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/bc41e90d-b384-408f-8a5d-1eeb60f5aca2/user_cropped_screenshot.png?tl_px=36,0&br_px=1183,468&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,768)
 
 
-20\.**If you are not in the MCP LAB directory, cd there now** 
+18\.**If you are not in the MCP LAB directory, cd there now** 
 
 Import the agent: 
 ```bash
@@ -192,7 +164,7 @@ orchestrate agents import -f ./github_helper.yaml
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/02ac635e-0622-41e9-a456-db960eadbb8a/user_cropped_screenshot.png?tl_px=0,16&br_px=1290,838&force_format=jpeg&q=100&width=1120.0)
 
 
-21\. Verify: 
+19\. Verify: 
 ```bash
 orchestrate agents list
 ```
@@ -206,7 +178,7 @@ orchestrate agents list
 Tip: We will now Turn on the GitHub MCP Tools for the created agent
 
 
-22\. Type:
+20\. Type:
 ```bash
 orchestrate chat start
 ```
@@ -215,51 +187,50 @@ orchestrate chat start
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/c9f6e361-750c-402d-bc73-44c59025924b/screenshot.webp?tl_px=0,0&br_px=2190,540&force_format=jpeg&q=100&width=1120.0)
 
 
-23\. You will now be brought to a UI that looks similar to the following
+21\. You will now be brought to a UI that looks similar to the following
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/4dcf2247-eafd-49c5-aaec-1e93237e7062/screenshot.webp?tl_px=0,0&br_px=2907,1576&force_format=jpeg&q=100&width=1120.0)
 
 
-24\. In the bottom left corner click "manage agents"
+22\. In the bottom left corner click "manage agents"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/b0a44fc5-a145-4cf0-9013-de83aab45732/user_cropped_screenshot.png?tl_px=0,0&br_px=2907,1576&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=20,556)
 
 
-25\. Click "github_helper_react"
+23\. Click "github_helper_react"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/c8ee1ee3-6aa1-480f-86d1-5fe7ecff5283/user_cropped_screenshot.png?tl_px=0,0&br_px=2902,1574&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=388,361)
 
 
-26\. Click "Add a tool"
+24\. Click "Add a tool"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/6bb7ebe2-2279-4e18-82fa-706855a03839/ascreenshot.jpeg?tl_px=44,0&br_px=1420,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,276)
 
-27\. Click "Import"
+25\. Click "Import"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/df3b5699-6b46-4e08-84e1-14deea30c427/user_cropped_screenshot.png?tl_px=0,0&br_px=2938,1654&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=358,341)
 
 
-28\. Click "Import from MCP server"
+26\. Click "Import from MCP server"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/3e41b49e-943d-43d0-bb21-24a54d70523a/user_cropped_screenshot.png?tl_px=0,0&br_px=2938,1662&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=684,275)
 
 
-29\. Click "Manage MCP servers"
+27\. Click "Add MCP server"
 
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/38fc8094-9468-499a-b5f7-c6406c3b9bd3/user_cropped_screenshot.png?tl_px=0,0&br_px=2936,1630&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=836,103)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-09/a0c9418c-ec83-49f0-8322-479348a17361/user_cropped_screenshot.png?tl_px=0,0&br_px=2692,1528&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=942,117)
 
+28\. Add the MCP Server as follows
 
-30\. Click "Edit details"
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/11303fb9-f68e-4290-8479-cb9f7fe3978e/user_cropped_screenshot.png?tl_px=0,0&br_px=2926,1344&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=949,173)
-
-
-31\. Click "Connect & Done". Then close "Edit MCP Server" window with the X in the upper right hand corner.
-
-![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/fc1d0b5c-6ee8-4dfa-bc7b-b838ea574807/user_cropped_screenshot.png?tl_px=0,0&br_px=2936,1678&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=156,499)
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-09/f65b7195-262a-472c-8a70-6364ef65228c/screenshot.webp?tl_px=0,0&br_px=2466,1430&force_format=jpeg&q=100&width=1120.0)
 
 
-32\. Import tools from MCP server
+29\. Click "Connect & Done". Then close "Add MCP Server" window with the X in the upper right hand corner.
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-09/1738d43f-c4d4-42c5-9799-3d17c5cd3617/screenshot.webp?tl_px=0,0&br_px=2444,1408&force_format=jpeg&q=100&width=1120.0)
+
+
+30\. Import tools from MCP server
 
 **I suggest toggling mcpsearch_repositories & mcpcreate_repository but feel free to toggle actions you would like to explore**
 
@@ -267,7 +238,7 @@ orchestrate chat start
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-26/56b20928-5316-4b5b-9c85-b052a08bed9a/screenshot.webp?tl_px=0,0&br_px=2930,1544&force_format=jpeg&q=100&width=1120.0)
 
 
-33\. Once tools have been added feel free to ask your agent "List my repositories" or "What can you do for me?"
+31\. Once tools have been added feel free to ask your agent "List my repositories" or "What can you do for me?"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/a7511b40-c14b-4409-931a-24acf30a2ba0/ascreenshot.jpeg?tl_px=94,186&br_px=1470,956&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=748,511)
 
