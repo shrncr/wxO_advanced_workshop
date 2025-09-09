@@ -1,0 +1,20 @@
+spec_version: v1
+kind: knowledge_base
+#The line below is naming our knowledge base, if you are on the same tenant as someone else doing this lab, you may have to change this name so there is a new kb instead of updating the previous kb.
+name: ibm_knowledge_F1
+description: "This knowledge base contains detailed information about the F1 movie."
+prioritize_built_in_index: false #this line must be set to false when using an external vector index.
+conversational_search_tool:
+  index_config: #The section below is the configuration and credentials that I used to create our vector index.
+    - milvus: 
+        grpc_host: EnterGrpcHostHere #Enter your grpc_host from your instructor into this line.
+        grpc_port: "" #Enter your grpc_port from your instructor into this line.
+        database: default
+        collection: wx_f1
+        index: vector
+        #Below is the embedding model that we used to create our vector database, this cannot be changed here, but can be changed in watsonx.ai where our vector index was created.
+        embedding_model_id: sentence-transformers/all-minilm-l6-v2
+        limit: "10"
+        field_mapping:
+            title: document_name
+            body: text
