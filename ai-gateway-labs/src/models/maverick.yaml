@@ -1,0 +1,11 @@
+spec_version: v1
+kind: model
+name: watsonx/meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+display_name: Maverick # Optional
+description: Llam 4 Maverick,a 17 billion active parameter model with 128 experts. # Optional
+tags: #Optional
+  - Meta
+  - "128 Experts"
+model_type: chat # Optional. Default is "chat". Options: ["chat"|"chat_vision"|"completion"|"embedding"]
+provider_config:
+  request_timeout: 20000
