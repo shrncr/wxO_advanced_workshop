@@ -48,7 +48,7 @@
 #### Configuring Langfuse Integration with Orchestrate ADK
 
 
-9\. Navigate to your integrated terminal in VSCode. 
+#### Navigate to your integrated terminal in VSCode. 
 
 9\. Ensure your venv is activated with the following command from the `wxO_advanced_workshop` directory
 
@@ -104,15 +104,15 @@ orchestrate env activate local
 
 
 #### Chat With Agents
-17\. Bring up your chat window by typing the following command in the terminal.
+19\. Bring up your chat window by typing the following command in the terminal.
 ```bash 
 orchestrate chat start 
 ```
 
-19\. Open <http://localhost:3000/> (local environment)
+20\. Open <http://localhost:3000/> (local environment)
 
 
-20\. Chat with an agent of your choice. Langfuse will monitor all of your interactions with any agent in the activated environment.
+21\. Chat with an agent of your choice. Langfuse will monitor all of your interactions with any agent in the activated environment.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/71d6e6ef-4ae5-4aa4-b4b4-580bf9d4b2e0/ascreenshot.jpeg?tl_px=0,0&br_px=1920,1200&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=75,-36)
 
@@ -120,52 +120,52 @@ orchestrate chat start
 #### Observing Agent Interactions
 
 
-21\. Once you are done chatting with your agent(s), navigate back to Langfuse and click "Tracing"
+22\. Once you are done chatting with your agent(s), navigate back to Langfuse and click "Tracing"
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/4f45f3bc-c723-47ff-bb05-c7ec3eca28b7/user_cropped_screenshot.webp?tl_px=0,172&br_px=1323,911&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=38,189)
 
 
-22\. This page will show you a table of all traces that Langfuse collected in your environment. Click on one of the traces.
+23\. This page will show you a table of all traces that Langfuse collected in your environment. Click on one of the traces.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/8165158d-400b-40d6-8824-24313280237f/ascreenshot.jpeg?tl_px=0,58&br_px=1376,827&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=274,277)
 
 
-23\. Here you can see the preview for the selected trace.
+24\. Here you can see the preview for the selected trace.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/607f9ad5-a73a-4390-bb8b-aaa9d80aae55/user_cropped_screenshot.webp?tl_px=281,86&br_px=1919,1001&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=593,277)
 
 
-24\. The left panel allows you to explore the depth levels of the trace, or to view all of the observations nested within your selected trace.
+25\. The left panel allows you to explore the depth levels of the trace, or to view all of the observations nested within your selected trace.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-22/22fd2262-f577-4b34-b320-be48f62b706a/user_cropped_screenshot.webp?tl_px=217,142&br_px=1855,1057&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=528,400)
 
 
-25\. Click on an observation from the left panel.
+26\. Click on an observation from the left panel.
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/65a298a7-1d0c-40f1-a96a-4094b1e5be7a/ascreenshot.jpeg?tl_px=272,206&br_px=1910,1122&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=885,449)
 
 
-26\. Click here to download the trace data
+27\. Click here to download the trace data
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/d13173e4-238b-4e2f-bf3f-96d0b975d0d0/user_cropped_screenshot.webp?tl_px=514,157&br_px=1624,777&force_format=jpeg&q=100&width=1110&wat_scale=99&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=433,50)
 
 
-27\. Click here to structure observations as a timeline
+28\. Click here to structure observations as a timeline
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/a41f8326-7bc0-4620-a07f-25add1974168/user_cropped_screenshot.webp?tl_px=497,143&br_px=1607,763&force_format=jpeg&q=100&width=1110&wat_scale=99&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=512,66)
 
 
-28\. Click here to change the trace view settings
+29\. Click here to change the trace view settings
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/879abe6a-1936-4a16-bf6f-6c7180bc8000/ascreenshot.jpeg?tl_px=415,149&br_px=1525,769&force_format=jpeg&q=100&width=1110&wat_scale=99&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=491,60)
 
 
-29\. Click here to view a table of observations
+30\. Click here to view a table of observations
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/e44be3c6-e2a3-448d-912b-a39b875aba0c/ascreenshot.jpeg?tl_px=233,154&br_px=1343,774&force_format=jpeg&q=100&width=1110&wat_scale=99&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=114,94)
 
 
-30\. Click an observation
+31\. Click an observation
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/44acbdd6-6d8c-4f56-8527-9209765c3974/ascreenshot.jpeg?tl_px=204,171&br_px=1187,721&force_format=jpeg&q=100&width=983&wat_scale=87&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=352,234)
 
