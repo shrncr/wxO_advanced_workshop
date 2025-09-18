@@ -10,8 +10,6 @@ In this lab, you'll build a Python-based web search tool using the Tavily API an
 
 4. Import your tool and agent into an Orchestrate environment of your choice
 
-Note: You must complete the previous lab (where you set up your Tavily API connection) before starting this one.
-
 > ⚠️ **Important Alert: Python Indentation**
 >
 > In this lab guide, you will see both **screenshots** and **code snippets**.  
@@ -24,19 +22,42 @@ Note: You must complete the previous lab (where you set up your Tavily API conne
 
 
 ## Section 1 : Creating the Connection to Tavily
-1\. 
+
+
+1\. Navigate to <https://www.tavily.com/> and click the `Sign up` button on the top right
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-18/b9d86162-8033-48b3-b3f1-216f5a70ae32/user_cropped_screenshot.webp?tl_px=544,0&br_px=1920,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=939,88)
+
+
+2\. On the bottom of the modal, click `Sign Up`
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-18/ca95e29a-ab51-434c-941d-756c4b76724c/user_cropped_screenshot.webp?tl_px=304,228&br_px=1680,998&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=524,541)
+
+
+3\. You may sign up with Google, GitHub, or an Email Address.
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-18/bf445a1c-b952-4380-9754-f21328b7f35e/user_cropped_screenshot.webp?tl_px=0,0&br_px=1920,974&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=506,190)
+
+
+4\. You will be directed to this page. Click under the `Key` Column to copy your API. You will need this to create a connection to Tavily
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-09-18/25eb817c-cec2-4c2c-94ea-ec3fffea54e3/user_cropped_screenshot.webp?tl_px=0,0&br_px=1920,1200&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=530,540)
+
+5\.  Go back to your terminal. This command `instantiates` a new connection instance and gives it a name.
 ```bash
 orchestrate connections add --app-id tavily 
 ```
 
 
-2\. 
+6\. Now, type this next command. Here, you configure your tavily connection's env, type, and kind properties. The options for these commands are `enums`, which means you can choose from a list of options. To see these options, you can type `orchestrate connections configure --help` in your terminal window.
 ```bash
 orchestrate connections configure --app-id tavily --env draft --type member --kind api_key
 ```
 
 
-3\. 
+7\. Finally, we are going to associate our API key with our tavily connection. Use the API key from step 4.
+
+We would not have been able to do this without step 6. This is because step 6 is where we said that we plan to use an `api-key` to connect to our app.
 ```bash
 orchestrate orchestrate connections set-credentials --app-id tavily --env draft -k <put-key-here>
 ```
