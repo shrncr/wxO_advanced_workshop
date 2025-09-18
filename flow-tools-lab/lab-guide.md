@@ -331,7 +331,7 @@ def build_f1_flow(aflow: Flow = None) -> Flow:
 
 36\. 
 ```bash 
-orchestrate env activate local
+orchestrate env activate <environment-name>
 ````
 
 
@@ -396,7 +396,7 @@ orchestrate tools import -k python -f ./tools/web_search.py --app-id tavily
 
 45\. activate your local environment with 
 ```bash
-orchestrate env activate local
+orchestrate env activate <env-name>
 ```
 
 
