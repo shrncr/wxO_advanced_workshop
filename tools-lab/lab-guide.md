@@ -164,22 +164,22 @@ Remember to press `Ctrl + S` to save your file.
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/0c365aa7-1ec8-4866-8e9a-8b8457b12ddc/ascreenshot.jpeg?tl_px=0,0&br_px=1938,1083&force_format=jpeg&q=100&width=1120.0)
 
 
-15\. In your terminal and from the wXO_advanced_workshop directory, type the command below to import your web_search tool
+15\. In your terminal and from the `tools-lab` directory, type the command below to import your web_search tool
 
 ```bash
-orchestrate tools import -f ./tools-lab/tools/web_search_tool/web_search.py -r ./tools-lab/tools/web_search_tool/requirements.txt -k python --app-id tavily
+orchestrate tools import -f ./tools/web_search_tool/web_search.py -r ./tools/web_search_tool/requirements.txt -k python --app-id tavily
 ```
 15\. Ensure your virtual environment is activated, orchestrate server is running, and that you are connected to your local environment. 
 
 
-16\. In your terminal and from the wXO_advanced_workshop directory, type the command below to import your web_search tool. 
+16\. In your terminal and from the `tools-lab` directory, type the command below to import your web_search tool. This is where you upload your web-researcher agent to Orchestrate!
 
 ```bash 
-orchestrate agents import -f ./tools-lab/agents/agent.yaml
+orchestrate agents import -f ./agents/agent.yaml
 ```
 
 
-17\. Open http://localhost:3000/ and chat with your web_researcher agent! If localhost is not running, remember to run `orchestrate chat start"
+17\. Go to a web browser, log into your Orchestrate environment, and chat with your web_researcher agent!
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/cb01723b-79f2-4b5f-9b8e-1169d7930f75/screenshot.webp?tl_px=0,0&br_px=1218,820&force_format=jpeg&q=100&width=1120.0)
 
