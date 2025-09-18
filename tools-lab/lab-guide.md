@@ -22,6 +22,27 @@ Note: You must complete the previous lab (where you set up your Tavily API conne
 >
 > If you see errors related to indentation, carefully re-align the code before running it.
 
+
+## Section 1 : Creating the Connection to Tavily
+1\. 
+```bash
+orchestrate connections add --app-id tavily 
+```
+
+
+2\. 
+```bash
+orchestrate connections configure --app-id tavily --env draft --type member --kind api_key
+```
+
+
+3\. 
+```bash
+orchestrate orchestrate connections set-credentials --app-id tavily --env draft -k <put-key-here>
+```
+
+
+## Section 2: Creating the Tavily Web Search Tool
 1\. Navigate to the tools-lab folder, open the tools folder, and then open web_search.py
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-20/2c6a96ad-4b62-48aa-864e-5f3b5dddf6f5/ascreenshot.jpeg?tl_px=0,77&br_px=982,626&force_format=jpeg&q=100&width=983&wat_scale=87&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=151,267)
