@@ -55,19 +55,18 @@
 ```bash 
 source ./.venv/bin/activate
 ```
- 
 
-10\. Type the following into the terminal, but **do not** yet hit enter: 
+ 10\. Activate the environment for which you'd like to set up observability. For now, let's activate our techzone with the below command:
 ```bash 
-orchestrate settings observability langfuse configure --url https://us.cloud.langfuse.com/api/public/otel --health-uri https://us.cloud.langfuse.com --project-id=
+orchestrate env activate <replace-this-with-your-techzone-env-name>
 ```
 
 
-
-11\. Navigate back to the langfuse project page
-
-
-12\. Press `Ctrl + C` or `Command + C` on this part of the page url to copy the project ID
+11\. Type the following into the terminal, but **do not** yet hit enter: 
+```bash 
+orchestrate settings observability langfuse configure --url https://us.cloud.langfuse.com/api/public/otel --health-uri https://us.cloud.langfuse.com --project-id=
+```
+12\. Navigate back to the langfuse project page and press `Ctrl + C` or `Command + C` on this part of the page url to copy the project ID
 
 ![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-08-11/bdb91897-0cbd-43f5-a09a-d5df2d692547/ascreenshot.jpeg?tl_px=126,0&br_px=1034,507&force_format=jpeg&q=100&width=907)
 
@@ -88,20 +87,6 @@ orchestrate settings observability langfuse configure --url https://us.cloud.lan
 ```bash
 orchestrate settings observability langfuse configure  --url "https://us.cloud.langfuse.com/api/public/otel"  --health-uri "https://us.cloud.langfuse.com"  --project-id "$LANGFUSE_PROJECT_ID" --api-key "$LANGFUSE_API_KEY"
 ```
-
-
-
-17\. Start the Orchestrate server with Langfuse enabled by typing (the -l  argument means, "Yes, use langfuse!")
-```bash 
-orchestrate server start -l --env-file=./relative/path/to/env/file; 
-```
-
-
-18\. Activate the environment for which you'd like to set up observability. For now, let's activate our local environment with the below command:
-```bash 
-orchestrate env activate local
-```
-
 
 #### Chat With Agents
 19\. Bring up your chat window by typing the following command in the terminal.
